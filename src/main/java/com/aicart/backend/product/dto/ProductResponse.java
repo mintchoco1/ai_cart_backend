@@ -10,12 +10,10 @@ public class ProductResponse {
     private String barcode;
     private String imageUrl;
 
-    private ProductResponse(Long id, String name, int price, String barcode, String imageUrl) {
+    private ProductResponse(Long id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.barcode = barcode;
-        this.imageUrl = imageUrl;
     }
 
     // Entity를 DTO로 변환하는 정적 팩토리 메서드
@@ -23,9 +21,7 @@ public class ProductResponse {
         return new ProductResponse(
                 product.getId(),
                 product.getName(),
-                product.getPrice(),
-                product.getBarcode(),
-                product.getImageUrl()
+                product.getPrice()
         );
     }
 

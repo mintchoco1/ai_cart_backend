@@ -20,14 +20,14 @@ public class ProductController {
     }
 
     // 바코드로 상품 조회: GET /api/products/barcode/{barcode}
-    @GetMapping("/barcode/{barcode}")
-    public ApiResponse<ProductResponse> findByBarcode(@PathVariable String barcode) {
+    //@GetMapping("/barcode/{barcode}")
+    //public ApiResponse<ProductResponse> findByBarcode(@PathVariable String barcode) {
         //product 변수에 dto가 담김
-        ProductResponse product = productService.findByBarcode(barcode);
+        //ProductResponse product = productService.findByBarcode(barcode);
         //dto를 ApiResponse로 감싸서 반환
         //반환된 객체를 스프링이 JSON으로 변환->http 응답으로 앱에 전송
-        return ApiResponse.success("상품 조회 성공", product);
-    }
+        //return ApiResponse.success("상품 조회 성공", product);
+    //}
 
     // YOLO 라벨로 상품 조회: GET /api/products/yolo/{yoloLabel}
     @GetMapping("/yolo/{yoloLabel}")

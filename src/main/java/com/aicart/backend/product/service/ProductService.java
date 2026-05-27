@@ -18,14 +18,14 @@ public class ProductService {
     }
 
     // 바코드로 상품 조회
-    public ProductResponse findByBarcode(String barcode) {
-        Product product = productRepository.findByBarcode(barcode)
-                .orElseThrow(() -> new IllegalArgumentException(
-                        "해당 바코드의 상품을 찾을 수 없습니다: " + barcode
-                ));
-
-        return ProductResponse.from(product);
-    }
+//    public ProductResponse findByBarcode(String barcode) {
+//        Product product = productRepository.findByBarcode(barcode)
+//                .orElseThrow(() -> new IllegalArgumentException(
+//                        "해당 바코드의 상품을 찾을 수 없습니다: " + barcode
+//                ));
+//
+//        return ProductResponse.from(product);
+//    }
 
     // YOLO 라벨로 상품 조회
     public ProductResponse findByYoloLabel(String yoloLabel) {

@@ -22,23 +22,15 @@ public class Product {
     private int price;
 
     @Column(nullable = false, unique = true)
-    private String barcode;
-
-    @Column
-    private String imageUrl;
-
-    @Column(nullable = false, unique = true)
     private String yoloLabel;
 
     // JPA는 엔티티를 DB에서 불러올 때 기본 생성자를 필요로 함
     protected Product() {
     }
 
-    public Product(String name, int price, String barcode, String imageUrl, String yoloLabel) {
+    public Product(String name, int price, String yoloLabel) {
         this.name = name;
         this.price = price;
-        this.barcode = barcode;
-        this.imageUrl = imageUrl;
         this.yoloLabel = yoloLabel;
     }
 
@@ -52,14 +44,6 @@ public class Product {
 
     public int getPrice() {
         return price;
-    }
-
-    public String getBarcode() {
-        return barcode;
-    }
-
-    public String getImageUrl() {
-        return imageUrl;
     }
 
     public String getYoloLabel() {
